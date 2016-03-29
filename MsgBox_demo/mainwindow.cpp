@@ -1,12 +1,25 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QMessageBox>
+#include<QPushButton>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //创建自定义对话框
+    anclarkMsg = new QMessageBox(QMessageBox::NoIcon,"自定义对话框","匠心独运，爱拼会赢");
+    anclarkMsg->setIconPixmap(QPixmap("/otto.png"));
+    QPushButton *firstButton = new QPushButton("Testor");
+    anclarkMsg->addButton(firstButton,QMessageBox::AcceptRole);
+
+    anclarkMsg->addButton("Second Button",QMessageBox::AcceptRole);
+    anclarkMsg->addButton("Third Button",QMessageBox::AcceptRole);
+    anclarkMsg->addButton(QMessageBox::Cancel);
+
+
 
     //连接信号和槽
     connect(ui->btnInformation,SIGNAL(clicked()),this,SLOT(slotInformation()));
@@ -56,5 +69,5 @@ void MainWindow::slotAboutQt()
 
 void MainWindow::slotCustom()
 {
-    //Dummy code here
+    anclarkMsg->show();
 }

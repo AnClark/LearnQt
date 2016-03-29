@@ -27,6 +27,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    //自定义对话框之对象声明
+    QMessageBox *anclarkMsg;
 };
 
 #endif // MAINWINDOW_H
