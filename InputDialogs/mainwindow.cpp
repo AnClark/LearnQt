@@ -25,7 +25,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::slotSetLabel()
 {
-
+    QString buff=QInputDialog::getText(this,commonTitle,"想设置什么卷标呢？");
+    ui->lblLabel->setText(buff);
 }
 
 void MainWindow::slotSetFS(){
@@ -41,10 +42,21 @@ void MainWindow::slotSetFS(){
 }
 
 void MainWindow::slotSetSize(){
+    int diskSize=QInputDialog::getInt(this,commonTitle,"输入要分配的磁盘空间大小",ui->lblSize->text().toInt(),0,16777216,100);
+
+    ui->lblSize->setText(QString::number(diskSize));
 
 
 }
 
 void MainWindow::slotSetUnit(){
+    QStringList unitList;
+    unitList.append("4096");
+    unitList.append("2048");
+    unitList.append("1024");
+    unitList.append("512");
+    unitList.append("256");
 
+    QString buff=QInputDialog::getItem(this,commonTitle,"选择分配单元大小，单位为字节",unitList,3,false);
+    ui->lblUnit->setText(buff);
 }
