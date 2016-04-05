@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>708</width>
-    <height>505</height>
+    <width>747</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,77 +17,80 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>17</y>
-      <width>671</width>
-      <height>421</height>
+      <x>70</x>
+      <y>80</y>
+      <width>611</width>
+      <height>121</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QFormLayout" name="formLayout">
      <item row="0" column="0">
-      <widget class="QPushButton" name="btnFileDialog">
+      <widget class="QPushButton" name="btnSetLabel">
        <property name="text">
-        <string>文件对话框</string>
+        <string>磁盘卷标</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="txtFile">
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
+      <widget class="QLabel" name="lblLabel">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="btnColorDialog">
+      <widget class="QPushButton" name="btnSetFS">
        <property name="text">
-        <string>颜色对话框</string>
+        <string>文件系统</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QFrame" name="frmColor">
+      <widget class="QLabel" name="lblFS">
        <property name="frameShape">
         <enum>QFrame::Box</enum>
        </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <property name="lineWidth">
-        <number>5</number>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QPushButton" name="btnFontDialog">
+      <widget class="QPushButton" name="btnSetSize">
        <property name="text">
-        <string>字体对话框</string>
+        <string>磁盘大小</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="txtFont">
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-        </font>
+      <widget class="QLabel" name="lblSize">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QPushButton" name="btnSetUnit">
        <property name="text">
-        <string>文本内容</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <string>分配单元</string>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QTextEdit" name="txtTextContent"/>
+      <widget class="QLabel" name="lblUnit">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -97,7 +100,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>708</width>
+     <width>747</width>
      <height>23</height>
     </rect>
    </property>
