@@ -44,6 +44,7 @@ void MainWindow::slotSetFS(){
 void MainWindow::slotSetSize(){
     int diskSize=QInputDialog::getInt(this,commonTitle,"输入要分配的磁盘空间大小",ui->lblSize->text().toInt(),0,16777216,100);
 
+    //要将数值数据转换成QString，必须要用到QString的静态函数number
     ui->lblSize->setText(QString::number(diskSize));
 
 
