@@ -55,11 +55,25 @@ void MainWindow::slotFileDialog()
 
 void MainWindow::slotColorDialog()
 {
+    /*
     QColor color =QColorDialog::getColor(Qt::white,this,"选择颜色");
+    QPalette pal;
+    pal.setColor(QPalette::Background,color);
+    ui->frmColor->setPalette(pal);
+*/
+
+    QColor color = QColorDialog::getColor(Qt::white,this,"选择颜色");
+
+    if(color.isValid())
+        ui->frmColor->setPalette(QPalette(color));
+
 }
 
 void MainWindow::slotFontDialog()
 {
-
+    bool ok;
+    QFont font=QFontDialog::getFont(&ok,ui->txtFont->font());
+    if(ok)
+        ui->txtFont->setFont(font);
 
 }

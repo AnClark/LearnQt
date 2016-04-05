@@ -83,6 +83,7 @@ public:
         frmColor->setObjectName(QStringLiteral("frmColor"));
         frmColor->setFrameShape(QFrame::Box);
         frmColor->setFrameShadow(QFrame::Raised);
+        frmColor->setLineWidth(5);
 
         gridLayout->addWidget(frmColor, 1, 1, 1, 1);
 
