@@ -1,5 +1,9 @@
 #-------------------------------------------------
 #
+#   QT实现文本编辑器
+#   By:     yao_hust_iAC
+#   http://blog.csdn.net/yao_wust/article/details/23830141
+#
 # Project created by QtCreator 2016-04-05T18:37:12
 #
 #-------------------------------------------------
