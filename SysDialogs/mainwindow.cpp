@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include<QFileDialog>
-#include<QTextStream>
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -56,7 +55,7 @@ void MainWindow::slotFileDialog()
 
 void MainWindow::slotColorDialog()
 {
-
+    QColor color =QColorDialog::getColor(Qt::white,this,"选择颜色");
 }
 
 void MainWindow::slotFontDialog()

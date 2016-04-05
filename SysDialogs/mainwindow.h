@@ -4,6 +4,13 @@
 #include <QMainWindow>
 #include<QMessageBox>
 
+#include<QFileDialog>
+#include<QColorDialog>
+#include<QFontDialog>
+
+#include<QTextStream>
+
+
 namespace Ui {
 class MainWindow;
 }
